@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07C75A411AC979540078B165 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C75A401AC979540078B165 /* MainTableViewCell.m */; };
-		07C75A441AC9796E0078B165 /* HeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C75A431AC9796E0078B165 /* HeaderTableViewCell.m */; };
 		07C79EE51AC933FA00530B9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C79EE41AC933FA00530B9F /* main.m */; };
 		07C79EE81AC933FA00530B9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C79EE71AC933FA00530B9F /* AppDelegate.m */; };
 		07C79EEB1AC933FA00530B9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C79EEA1AC933FA00530B9F /* ViewController.m */; };
@@ -30,6 +28,8 @@
 		07C79F201AC95B9700530B9F /* button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C79F1D1AC95B9700530B9F /* button@3x.png */; };
 		07C79F241AC96BF100530B9F /* bpg_nino_mtavruli_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07C79F221AC96BF100530B9F /* bpg_nino_mtavruli_bold.ttf */; };
 		07C79F251AC96BF100530B9F /* bpg_nino_mtavruli_normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07C79F231AC96BF100530B9F /* bpg_nino_mtavruli_normal.ttf */; };
+		07CAE54C1ACC109A00BD6E79 /* HeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CAE54B1ACC109A00BD6E79 /* HeaderTableViewCell.m */; };
+		07CAE54F1ACC10A800BD6E79 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CAE54E1ACC10A800BD6E79 /* MainTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +43,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07C75A3F1AC979540078B165 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
-		07C75A401AC979540078B165 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
-		07C75A421AC9796E0078B165 /* HeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderTableViewCell.h; sourceTree = "<group>"; };
-		07C75A431AC9796E0078B165 /* HeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderTableViewCell.m; sourceTree = "<group>"; };
 		07C79EDF1AC933FA00530B9F /* xFactor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xFactor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C79EE31AC933FA00530B9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07C79EE41AC933FA00530B9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -74,6 +70,10 @@
 		07C79F1D1AC95B9700530B9F /* button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@3x.png"; sourceTree = "<group>"; };
 		07C79F221AC96BF100530B9F /* bpg_nino_mtavruli_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bpg_nino_mtavruli_bold.ttf; sourceTree = "<group>"; };
 		07C79F231AC96BF100530B9F /* bpg_nino_mtavruli_normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bpg_nino_mtavruli_normal.ttf; sourceTree = "<group>"; };
+		07CAE54A1ACC109A00BD6E79 /* HeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderTableViewCell.h; sourceTree = "<group>"; };
+		07CAE54B1ACC109A00BD6E79 /* HeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderTableViewCell.m; sourceTree = "<group>"; };
+		07CAE54D1ACC10A800BD6E79 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		07CAE54E1ACC10A800BD6E79 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +115,10 @@
 		07C79EE11AC933FA00530B9F /* xFactor */ = {
 			isa = PBXGroup;
 			children = (
-				07C75A421AC9796E0078B165 /* HeaderTableViewCell.h */,
-				07C75A431AC9796E0078B165 /* HeaderTableViewCell.m */,
-				07C75A3F1AC979540078B165 /* MainTableViewCell.h */,
-				07C75A401AC979540078B165 /* MainTableViewCell.m */,
+				07CAE54A1ACC109A00BD6E79 /* HeaderTableViewCell.h */,
+				07CAE54B1ACC109A00BD6E79 /* HeaderTableViewCell.m */,
+				07CAE54D1ACC10A800BD6E79 /* MainTableViewCell.h */,
+				07CAE54E1ACC10A800BD6E79 /* MainTableViewCell.m */,
 				07C79EE61AC933FA00530B9F /* AppDelegate.h */,
 				07C79EE71AC933FA00530B9F /* AppDelegate.m */,
 				07C79EE91AC933FA00530B9F /* ViewController.h */,
@@ -302,11 +302,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CAE54C1ACC109A00BD6E79 /* HeaderTableViewCell.m in Sources */,
 				07C79EEB1AC933FA00530B9F /* ViewController.m in Sources */,
 				07C79EE81AC933FA00530B9F /* AppDelegate.m in Sources */,
-				07C75A411AC979540078B165 /* MainTableViewCell.m in Sources */,
 				07C79EE51AC933FA00530B9F /* main.m in Sources */,
-				07C75A441AC9796E0078B165 /* HeaderTableViewCell.m in Sources */,
+				07CAE54F1ACC10A800BD6E79 /* MainTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +436,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6d4662fc-d321-4014-98b8-ab79f8fb1f96";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -449,6 +450,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6d4662fc-d321-4014-98b8-ab79f8fb1f96";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

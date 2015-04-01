@@ -10,6 +10,7 @@
 #import "MainTableViewCell.h"
 #import "HeaderTableViewCell.h"
 
+
 @interface ViewController ()
 
 @end
@@ -26,6 +27,17 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.scrollEnabled = NO;
     self.scrollView.contentSize = CGSizeMake(0, self.view.bounds.size.height + 142);
+    self.scrollView.tag = 1;
+    
+    /*
+    NSURL *streamURL = [NSURL URLWithString:@"http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"];
+    _streamPlayer = [[MPMoviePlayerController alloc] initWithContentURL:streamURL];
+  
+    [self.streamPlayer.view setFrame: CGRectMake(0, 0, 500, 200) ];
+    self.streamPlayer.controlStyle = MPMovieControlStyleEmbedded;
+    [self.contentView addSubview: self.streamPlayer.view];
+    [self.streamPlayer play];
+     */
    
 }
 
@@ -35,10 +47,10 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    if(scrollView.bounds.origin.y == 142){
+    if(scrollView.bounds.origin.y == 142 & scrollView.tag == 1){
         self.tableView.scrollEnabled = YES;
     }
-    if(scrollView.bounds.origin.y == 0){
+    if(scrollView.bounds.origin.y == 0 & scrollView.tag == 1){
         self.tableView.scrollEnabled = NO;
     }
     
@@ -99,6 +111,24 @@
 }
 
 
+/*
+- (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Add your Colour.
+    MainTableViewCell *cell = (MainTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    [cell.contentView setBackgroundColor:[UIColor colorWithRed:17.0/255.0 green:25.0/255.0 blue:32.0/255.0 alpha:0.8]];  //highlight colour
+    [cell setBackgroundColor:[UIColor colorWithRed:17.0/255.0 green:25.0/255.0 blue:32.0/255.0 alpha:0.8]];
+  //  [cell.contentView setBackgroundColor:[UIColor colorWithRed:17.0/255.0 green:25.0/255.0 blue:32.0/255.0 alpha:0.8]];
+ 
+}
+
+- (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Reset Colour.
+    MainTableViewCell *cell = (MainTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    [cell.contentView setBackgroundColor:[UIColor colorWithRed:17.0/255.0 green:25.0/255.0 blue:32.0/255.0 alpha:0.9]]; //normal color
+    
+}
+
+*/
 
 
 - (void)didReceiveMemoryWarning {

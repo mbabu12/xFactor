@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+ #import <MediaPlayer/MediaPlayer.h>
 
 @interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (strong, nonatomic) MPMoviePlayerController *streamPlayer;
 
 @end
 
