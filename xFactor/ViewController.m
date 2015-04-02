@@ -28,22 +28,45 @@
     self.tableView.scrollEnabled = NO;
     self.scrollView.contentSize = CGSizeMake(0, self.view.bounds.size.height + 142);
     self.scrollView.tag = 1;
-    
+    first = NO;
+   
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playbackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:nil];
     /*
-    NSURL *streamURL = [NSURL URLWithString:@"http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"];
+    NSURL *streamURL = [NSURL URLWithString:@"http://vod03.silk.myvideo.ge/secure/254/2539738.mp4?key=0dxKh2HSOv2Ck-WzFEzTqQ&ttl=1427980876&start=0"];
     _streamPlayer = [[MPMoviePlayerController alloc] initWithContentURL:streamURL];
   
     [self.streamPlayer.view setFrame: CGRectMake(0, 0, 500, 200) ];
     self.streamPlayer.controlStyle = MPMovieControlStyleEmbedded;
     [self.contentView addSubview: self.streamPlayer.view];
-    [self.streamPlayer play];
-     */
-   
+    [self.streamPlayer play]; */
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
+    
+    if(!first){
+        first = YES;
+        self.scrollView.contentSize = CGSizeMake(0, self.view.bounds.size.height + 142);
+    }
+    self.scrollView.scrollEnabled = YES;
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
     self.scrollView.contentSize = CGSizeMake(0, self.view.bounds.size.height + 142);
 
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.scrollView.contentSize = CGSizeMake(0, self.view.bounds.size.height + 142);
+}
+
+- (void)playbackDidFinish:(NSNotification *)notification{
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -102,7 +125,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   
+    NSURL *streamURL = [NSURL URLWithString:@"http://vod03.silk.myvideo.ge/secure/254/2539738.mp4?key=0dxKh2HSOv2Ck-WzFEzTqQ&ttl=1427980876&start=0"];
+    _streamPlayerr = [[MPMoviePlayerViewController alloc] initWithContentURL:streamURL];
+    
+    [self presentMoviePlayerViewControllerAnimated:_streamPlayerr];
+
     
 }
 
