@@ -22,7 +22,7 @@
 {
     UIView *selectedBackgroundView = [[UIView alloc] initWithFrame:self.bounds];
     selectedBackgroundView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    selectedBackgroundView.backgroundColor = [UIColor colorWithRed:17.0/255.0 green:25.0/255.0 blue:32.0/255.0 alpha:0.8];
+    selectedBackgroundView.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:38.0/255.0 blue:49.0/255.0 alpha:1];
     self.selectedBackgroundView = selectedBackgroundView;
 }
 
