@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface AppDelegate ()
 
@@ -14,6 +15,17 @@
 
 @implementation AppDelegate
 
+- (NSUInteger) application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    if ([[self.window.rootViewController presentedViewController] isKindOfClass:[MPMoviePlayerViewController class]])
+    {
+        return UIInterfaceOrientationMaskAllButUpsideDown;
+    }
+    else
+    {
+        return UIInterfaceOrientationMaskPortrait;
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
